@@ -20,7 +20,7 @@
 
 <h3 align="center">Connect with me:</h3>
 <p align="center">
-<a href="https://www.linkedin.com/in/vishesh-mankotia" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="vishesh mankotia" height="30" width="40" /></a>
+<a href="https://www.linkedin.com/in/vishesh-mankotia-b8569b292/?trk=public-profile-join-page" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="vishesh mankotia" height="30" width="40" /></a>
 <a href="https://instagram.com/kshatriya_vishesh_mankotia" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="kshatriya_vishesh_mankotia" height="30" width="40" /></a>
 <a href="https://www.codechef.com/users/vishesh005" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.1.0/icons/codechef.svg" alt="vishesh005" height="30" width="40" /></a>
 <a href="https://www.hackerrank.com/mankotia005vish1" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/hackerrank.svg" alt="mankotia005vish1" height="30" width="40" /></a>
