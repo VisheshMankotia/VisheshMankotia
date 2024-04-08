@@ -1,5 +1,5 @@
 <div style="text-align:center;">
-<img src="https://t4.ftcdn.net/jpg/03/13/40/45/360_F_313404541_e9YZ3pht6oEEkMXuhxTboqXA2B2ShNnC.jpg" alt="Banner" width="1000" height="400">
+<img src="https://as2.ftcdn.net/v2/jpg/04/12/83/91/1000_F_412839178_eBThjVy75lyoTMkjcaSZSgeaH91M9bse.jpg" alt="Banner" width="1000" height="400">
 </div>
 <h1 align="center">Hi 👋, I'm Vishesh Mankotia</h1>
 
@@ -28,6 +28,7 @@
 <a href="https://www.leetcode.com/231fa01155" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/leet-code.svg" alt="231fa01155" height="30" width="40" /></a>
 <a href="https://www.hackerearth.com/@mankotia005vishesh" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/hackerearth.svg" alt="mankotia005vishesh" height="30" width="40" /></a>
 <a href="https://auth.geeksforgeeks.org/user/mankotia00cqi7" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/geeks-for-geeks.svg" alt="mankotia00cqi7" height="30" width="40" /></a>
+
 </p>
 
 <h3 align="Left"><b>Languages and Tools:</b></h3>
