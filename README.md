@@ -1,7 +1,5 @@
 
-<div style="text-align:center;">
-<img src="https://as2.ftcdn.net/v2/jpg/04/12/83/91/1000_F_412839178_eBThjVy75lyoTMkjcaSZSgeaH91M9bse.jpg" alt="Banner" width="1000" height="400">
-</div>
+
 <h1 align="center">Hi 👋, I'm Vishesh Mankotia</h1>
 
 <h3 align="center">I'm passionate to learn new things related to Technology..</h3>
