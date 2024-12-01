@@ -1,23 +1,24 @@
 
-
 <h1 align="center">Hi 👋, I'm Vishesh Mankotia</h1>
 
-<h3 align="center">I'm passionate to learn new things related to Technology..</h3>
+<h3 align="center"> 
+I'm Vishesh Mankotia , a Biotechnology student exploring the fusion of Biology 🧬 and Technology 💻. From coding algorithms to unraveling life's molecular mysteries, I'm passionate about solving challenges at the crossroads of science and tech.  
+ :dart: </h3>
 <img align="right" alt="Coding" width "100px" src="https://cdn.vectorstock.com/i/preview-1x/68/16/programmer-coding-laptop-computer-work-desk-vector-10076816.jpg"
 
 <p align="right"> <img src="https://komarev.com/ghpvc/?username=visheshmankotia&label=Profile%20views&color=0e75b6&style=flat" alt="visheshmankotia" /> </p>
 
 - 🔭 I’m currently **pursing My B.Tech Degree from Vignan's Deemed to be University**
 
-- 🌱 I’m currently learning **DSA in Java , C, Html, CSS..**
+- 🌱 I’m currently learning **DSA ,Web Development .**
 
 - 👀 I’m interested in **Problem Solving, Web Development**
 
-- 💬 Ask me about **Java, C, Html, CSS**
+- 💬 Ask me about **Python,Java, C, Html, CSS**
 
 - 📫 How to reach me **mankotia005vishesh@gmail.com**
 - 🛒Mini-Amazon Project-**https://visheshamazon.netlify.app/**
-
+- :trollface: In biotech, we’re not just decoding life **we’re reprogramming it.**
 <h3 align="Left"><b>Connect with me:</b></h3>
 <p align="center">
 <a href="https://www.linkedin.com/in/vishesh-mankotia-b8569b292/?trk=public-profile-join-page" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="vishesh mankotia" height="30" width="40" /></a>
