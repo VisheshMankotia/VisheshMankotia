@@ -10,11 +10,11 @@ I'm Vishesh Mankotia , a Biotechnology student exploring the fusion of Biology �
 
 - 🔭 I’m currently **pursing My B.Tech Degree from Vignan's Deemed to be University**
 
-- 🌱 I’m currently learning **DSA ,Web Development .**
+- 🌱 I’m currently learning **DSA ,Web Development,DBMS,SQL .**
 
 - 👀 I’m interested in **Problem Solving, Web Development**
 
-- 💬 Ask me about **Python,Java, C, Html, CSS**
+- 💬 Ask me about **Python,Java, C,SQL, Html, CSS**
 
 - 📫 How to reach me **mankotia005vishesh@gmail.com**
 - 🛒Mini-Amazon Project-**https://visheshamazon.netlify.app/**
