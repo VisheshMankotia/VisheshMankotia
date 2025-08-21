@@ -9,7 +9,7 @@
 
 - 🔭 I’m currently **pursing My B.Tech Degree from Vignan's Deemed to be University**
 
-- 🌱 I’m currently learning **Bioprocess Engineering and Fermentation Technology,Artificial Intelligence applications in Biotechnology,Data analysis and coding (Python, Java, C) for biological research,DSA,DBMS,SQL.**
+- 🌱 I’m currently learning **Bioprocess Engineering,Genetic Engineering,Python tools for biotechnology applications,DSA,DBMS,SQL.**
 
 - 👀 I’m interested in **Translational nanotech for healthcare (wound healing, antimicrobial materials),Bioinformatics, AI-driven drug discovery & enzyme engineering Sustainable bioprocesses and biotech entrepreneurship,Problem Solving(DSA,JAVA,PYTHON,C), Web Development.**
 
