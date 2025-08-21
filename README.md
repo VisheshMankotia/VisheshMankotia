@@ -1,8 +1,7 @@
 
 <h1 align="center">Hi 👋, I'm Vishesh Mankotia</h1>
 
-<h3 align="center"> 
-I'm Vishesh Mankotia , a Biotechnology student exploring the fusion of Biology 🧬 and Technology 💻. From coding algorithms to unraveling life's molecular mysteries, I'm passionate about solving challenges at the crossroads of science and tech.  
+<h3 align="center">  I am a Biotechnology student ,I integrate biotechnology with programming and AI models to solve problems in nanoparticle synthesis, bioprocessing, and healthcare
  :dart: </h3>
 <img align="right" alt="Coding" width "100px" src="https://cdn.vectorstock.com/i/preview-1x/68/16/programmer-coding-laptop-computer-work-desk-vector-10076816.jpg"
 
@@ -10,15 +9,15 @@ I'm Vishesh Mankotia , a Biotechnology student exploring the fusion of Biology �
 
 - 🔭 I’m currently **pursing My B.Tech Degree from Vignan's Deemed to be University**
 
-- 🌱 I’m currently learning **DSA ,Web Development,DBMS,SQL .**
+- 🌱 I’m currently learning **Bioprocess Engineering and Fermentation Technology,Artificial Intelligence applications in Biotechnology,Data analysis and coding (Python, Java, C) for biological research,DSA,DBMS,SQL.**
 
-- 👀 I’m interested in **Problem Solving, Web Development**
+- 👀 I’m interested in **Translational nanotech for healthcare (wound healing, antimicrobial materials),Bioinformatics, AI-driven drug discovery & enzyme engineering Sustainable bioprocesses and biotech entrepreneurship,Problem Solving(DSA,JAVA,PYTHON,C), Web Development.**
 
-- 💬 Ask me about **Python,Java, C,SQL, Html, CSS**
+- 💬 Ask me about **Molecular biology, genetic engineering & nanobiotech,Coding & AI for biological research,Bioprocess design and optimization,Python,Java, C,SQL, Html, CSS,Probiotics,Food Technology,Microbiology,Industrial Biotechnology,Biochemistry.**
 
 - 📫 How to reach me **mankotia005vishesh@gmail.com**
 - 🛒Mini-Amazon Project-**https://visheshamazon.netlify.app/**
-- :trollface: In biotech, we’re not just decoding life **we’re reprogramming it.**
+- :trollface:Merging biology with code —**building AI-driven biotech solutions.**
 <h3 align="Left"><b>Connect with me:</b></h3>
 <p align="center">
 <a href="https://www.linkedin.com/in/vishesh-mankotia-b8569b292/?trk=public-profile-join-page" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="vishesh mankotia" height="30" width="40" /></a>
