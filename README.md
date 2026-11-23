@@ -47,6 +47,16 @@ I enjoy turning scientific questions into computational workflows, visualization
 
 > These are research and development explorations; project scope and results are documented in their respective repositories.
 
+## 🚀 Project Portfolio
+
+The project work is organized in this repository under `projects/`. Each project has its own documentation, setup notes and starter files where applicable.
+
+| Project | Focus | Explore |
+|:--|:--|:--|
+| **TissueTalk** 🧬 | Interactive spatial gene-expression exploration with Streamlit | [Open project](projects/TissueTalk/) · [Run app](projects/TissueTalk/app.py) |
+| **CDK2–Tivozanib Docking** 🔬 | Protein–ligand docking workflow and reproducibility records | [Open project](projects/CDK2-Tivozanib-Molecular-Docking/) |
+| **Medicinal Plant Bioprospecting** 🌿 | Phytochemical curation, RDKit descriptors and computational prioritization | [Open project](projects/Medicinal-Plant-Bioprospecting/) |
+
 ## 🛠️ Tech Stack & Tools
 
 **Programming**
