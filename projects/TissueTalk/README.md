@@ -1,68 +1,97 @@
 # TissueTalk 🧬
-### Explore spatial gene-expression maps through an interactive interface
+### Interactive spatial gene-expression exploration
 
-TissueTalk is a research prototype for exploring spatial transcriptomics data. It lets a user select a region of tissue, compare gene expression in that region with the remaining tissue, and inspect genes that may be enriched locally.
+TissueTalk is a Streamlit research prototype for exploring spatial transcriptomics data. Select a region of tissue, compare its average gene expression with the rest of the sample, rank regional differences, and inspect the spatial distribution of an individual gene.
 
-> **Status:** Prototype / work in progress. The repository contains a starter interface and analysis outline. Dataset-specific validation, biological interpretation and model integration are ongoing.
+**Project status:** Working prototype. The app includes a synthetic demo mode and supports user-supplied AnnData `.h5ad` files. It is not a validated differential-expression pipeline and does not make diagnostic or clinical claims.
 
-## Goals
-- Load a spatial transcriptomics dataset with spot coordinates and gene-expression values.
-- Visualize the tissue spot map.
-- Select a region using an interactive control.
-- Calculate mean expression in the selected region and compare it with the rest of the tissue.
-- Rank genes by regional expression difference.
-- Add gene annotations and natural-language explanations as a future extension.
+## Features
+- Synthetic demo dataset to test the interface without downloading data.
+- Upload support for AnnData `.h5ad` datasets.
+- Spatial spot visualization and circular region selection.
+- Region-versus-rest gene-wise mean comparison.
+- Lists of genes with higher and lower mean expression in the selected region.
+- Downloadable CSV results.
+- Spatial expression map for an individual gene.
+- Sparse-matrix-aware calculations.
 
-## Current analysis concept
-For each gene:
+## Quick start
 
-`difference = mean(selected\_region) - mean(rest\_of\_tissue)`
+```bash
+git clone https://github.com/VisheshMankotia/VisheshMankotia.git
+cd VisheshMankotia/projects/TissueTalk
+python -m venv .venv
+```
 
-A positive difference indicates higher average expression in the selected region. This is a descriptive comparison, not a statistical test or proof of biological significance.
+Activate the environment:
 
-## Project structure
+**Windows PowerShell**
+```powershell
+.venv\Scripts\Activate.ps1
+```
+
+**macOS / Linux**
+```bash
+source .venv/bin/activate
+```
+
+Install and run:
+
+```bash
+pip install -r requirements.txt
+streamlit run app.py
+```
+
+The app starts in simulated demo mode. Switch off **Use simulated demo data** in the sidebar to upload your own dataset.
+
+## Input format
+
+The uploaded file must be an AnnData `.h5ad` object containing:
+- `adata.X`: expression matrix (spots × genes).
+- `adata.var_names`: gene identifiers.
+- `adata.obsm["spatial"]`: two-dimensional spot coordinates.
+
+See [DATA_GUIDE.md](DATA_GUIDE.md) for preprocessing and data-provenance guidance.
+
+## Analysis
+
+For each gene, TissueTalk calculates:
+
+`difference = mean(selected region) - mean(remaining tissue)`
+
+Sparse matrices are averaged without densifying the full expression matrix. Expression values are used as stored in the dataset; the app does not silently normalize or log-transform data.
+
+## Project layout
+
 ```
 TissueTalk/
 ├── app.py
 ├── requirements.txt
+├── DATA_GUIDE.md
+├── README.md
 ├── .gitignore
-└── README.md
+└── .streamlit/
+    └── config.toml
 ```
 
-## Setup
-1. Create and activate a Python virtual environment.
-2. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-3. Prepare a compatible AnnData `.h5ad` file with spatial coordinates in `adata.obsm["spatial"]`.
-4. Run:
-   ```bash
-   streamlit run app.py
-   ```
-5. Upload the dataset in the app.
-
-## Expected input
-- AnnData object containing gene expression in `adata.X`.
-- Gene identifiers in `adata.var_names`.
-- Two-dimensional spatial coordinates in `adata.obsm["spatial"]`.
-
-Check the dataset's documentation before assuming its expression values are normalized or log-transformed.
-
-## Important interpretation notes
-- Regional mean differences are exploratory and can be affected by spot density, library size, normalization, batch effects and tissue composition.
-- Use appropriate normalization and statistical testing before drawing research conclusions.
-- Gene-function annotations should be checked against authoritative biological databases.
-- Do not treat generated natural-language summaries as validated biological findings.
+## Limitations and responsible interpretation
+- Regional mean differences are descriptive and are not equivalent to statistically tested differential expression.
+- The app does not currently perform normalization, quality control, covariate adjustment, spatial statistical testing or multiple-testing correction.
+- Results may be influenced by library size, spot density, batch effects, tissue composition and coordinate scaling.
+- Gene names and annotations should be verified against authoritative sources.
+- Synthetic demo data are not biological observations.
+- Do not use the tool for diagnosis, treatment decisions or clinical interpretation.
 
 ## Roadmap
-- [x] Define region-versus-rest expression comparison.
-- [x] Create an interactive Streamlit starter app.
-- [ ] Add dataset-specific preprocessing and quality-control checks.
-- [ ] Add differential-expression statistics with appropriate assumptions.
-- [ ] Integrate curated gene annotations.
-- [ ] Add reproducible example data and screenshots.
-- [ ] Evaluate explanations with domain expertise.
+- [x] Interactive spatial spot map and region selection.
+- [x] Synthetic demo dataset.
+- [x] Region-versus-rest mean expression comparison.
+- [x] CSV export and single-gene spatial visualization.
+- [ ] Dataset-specific preprocessing and QC workflows.
+- [ ] Curated gene annotations with source links.
+- [ ] Statistically appropriate differential-expression methods.
+- [ ] Reproducible screenshots, tests and example walkthrough.
+- [ ] Optional natural-language assistant with transparent source attribution.
 
 ## Author
 **Vishesh Mankotia** · [GitHub](https://github.com/VisheshMankotia) · [LinkedIn](https://www.linkedin.com/in/vishesh-mankotia-b8569b292/)
