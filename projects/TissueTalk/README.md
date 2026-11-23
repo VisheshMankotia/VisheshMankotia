@@ -1,19 +1,21 @@
 # TissueTalk 🧬
-### Interactive spatial gene-expression exploration
+### AI-assisted spatial transcriptomics exploration
 
-TissueTalk is a Streamlit research prototype for exploring spatial transcriptomics data. Select a region of tissue, compare its average gene expression with the rest of the sample, rank regional differences, and inspect the spatial distribution of an individual gene.
+TissueTalk is a Streamlit research prototype that combines spatial gene-expression visualization, region-based expression summaries, gene-function annotations and a conversational AI assistant.
 
-**Project status:** Working prototype. The app includes a synthetic demo mode and supports user-supplied AnnData `.h5ad` files. It is not a validated differential-expression pipeline and does not make diagnostic or clinical claims.
+The original prototype was developed around a spatial transcriptomics dataset with **4,035 tissue spots and 36,601 genes**. This repository does not redistribute that dataset; upload your own compatible AnnData file or use the synthetic demo.
 
-## Features
-- Synthetic demo dataset to test the interface without downloading data.
-- Upload support for AnnData `.h5ad` datasets.
-- Spatial spot visualization and circular region selection.
-- Region-versus-rest gene-wise mean comparison.
-- Lists of genes with higher and lower mean expression in the selected region.
-- Downloadable CSV results.
-- Spatial expression map for an individual gene.
-- Sparse-matrix-aware calculations.
+## Core capabilities
+- Load AnnData `.h5ad` files with spatial coordinates.
+- Explore tissue spots and select a circular region of interest.
+- Compare gene-wise mean expression in the selected region against the remaining tissue.
+- Rank genes by positive and negative mean-expression differences.
+- Inspect a selected gene's spatial expression map.
+- Retrieve gene symbols, names and summaries from MyGene.info.
+- Ask a Groq-powered AI assistant questions grounded in the region-level results and retrieved annotations.
+- Listen to answers using browser speech synthesis.
+- Export expression comparisons and annotations as CSV files.
+- Explore the interface with synthetic demo data.
 
 ## Quick start
 
@@ -42,56 +44,83 @@ pip install -r requirements.txt
 streamlit run app.py
 ```
 
-The app starts in simulated demo mode. Switch off **Use simulated demo data** in the sidebar to upload your own dataset.
+The app opens in synthetic demo mode. Switch off **Use simulated demo data** to upload a real dataset.
 
-## Input format
+## Enable the AI assistant
 
-The uploaded file must be an AnnData `.h5ad` object containing:
+Set a Groq API key as an environment variable:
+
+**macOS / Linux**
+```bash
+export GROQ_API_KEY="your_key_here"
+```
+
+**Windows PowerShell**
+```powershell
+$env:GROQ_API_KEY="your_key_here"
+```
+
+For Streamlit Community Cloud, add this under App settings → Secrets:
+
+```toml
+GROQ_API_KEY = "your_key_here"
+```
+
+The app uses Groq's `openai/gpt-oss-20b` model. Keep the key private; never commit it to GitHub. If no key is configured, spatial analysis and MyGene annotation remain available while AI Q&A displays a setup message.
+
+## Dataset requirements
+
+The uploaded AnnData file must contain:
 - `adata.X`: expression matrix (spots × genes).
-- `adata.var_names`: gene identifiers.
-- `adata.obsm["spatial"]`: two-dimensional spot coordinates.
+- `adata.var_names`: gene identifiers, preferably gene symbols for annotation.
+- `adata.obsm["spatial"]`: two-dimensional spatial coordinates.
 
-See [DATA_GUIDE.md](DATA_GUIDE.md) for preprocessing and data-provenance guidance.
+See [DATA_GUIDE.md](DATA_GUIDE.md) for preprocessing and provenance notes.
 
-## Analysis
+## How the AI assistant works
 
-For each gene, TissueTalk calculates:
+TissueTalk passes the assistant a compact evidence package containing:
+- Dataset and region spot counts.
+- Top positive and negative region-versus-rest mean differences.
+- MyGene.info annotations retrieved for the most enriched genes.
+- A prompt instructing the model to distinguish measured expression patterns from known gene functions and to avoid unsupported claims.
 
-`difference = mean(selected region) - mean(remaining tissue)`
+The model is not given the full expression matrix. Its explanations are limited to the supplied summary and annotations.
 
-Sparse matrices are averaged without densifying the full expression matrix. Expression values are used as stored in the dataset; the app does not silently normalize or log-transform data.
+## Scientific interpretation and limitations
+- Region-minus-rest values are descriptive arithmetic mean differences, not formal differential-expression statistics.
+- The app does not automatically normalize expression, adjust for confounders, calculate p-values or perform multiple-testing correction.
+- Expression values retain the scale stored in `adata.X`.
+- MyGene.info annotations provide external gene knowledge and do not establish a causal explanation for the spatial pattern.
+- AI-generated explanations can be wrong and must be checked against primary literature and biological expertise.
+- Synthetic demo data are not biological observations.
+- Do not use TissueTalk for diagnosis or clinical decisions.
 
-## Project layout
+## Project structure
 
 ```
 TissueTalk/
 ├── app.py
 ├── requirements.txt
-├── DATA_GUIDE.md
 ├── README.md
+├── DATA_GUIDE.md
+├── DEPLOYMENT.md
+├── CHANGELOG.md
 ├── .gitignore
 └── .streamlit/
     └── config.toml
 ```
 
-## Limitations and responsible interpretation
-- Regional mean differences are descriptive and are not equivalent to statistically tested differential expression.
-- The app does not currently perform normalization, quality control, covariate adjustment, spatial statistical testing or multiple-testing correction.
-- Results may be influenced by library size, spot density, batch effects, tissue composition and coordinate scaling.
-- Gene names and annotations should be verified against authoritative sources.
-- Synthetic demo data are not biological observations.
-- Do not use the tool for diagnosis, treatment decisions or clinical interpretation.
-
 ## Roadmap
-- [x] Interactive spatial spot map and region selection.
-- [x] Synthetic demo dataset.
-- [x] Region-versus-rest mean expression comparison.
-- [x] CSV export and single-gene spatial visualization.
-- [ ] Dataset-specific preprocessing and QC workflows.
-- [ ] Curated gene annotations with source links.
-- [ ] Statistically appropriate differential-expression methods.
-- [ ] Reproducible screenshots, tests and example walkthrough.
-- [ ] Optional natural-language assistant with transparent source attribution.
+- [x] Spatial spot visualization and circular region selection.
+- [x] Region-versus-rest expression comparison.
+- [x] Gene ranking, CSV export and single-gene spatial visualization.
+- [x] MyGene.info annotation integration.
+- [x] Groq-based evidence-grounded Q&A.
+- [x] Browser text-to-speech controls.
+- [ ] Add reproducible formal differential-expression analysis.
+- [ ] Add validation against known tissue markers and expert review.
+- [ ] Add tests and a public deployment after end-to-end verification.
 
 ## Author
 **Vishesh Mankotia** · [GitHub](https://github.com/VisheshMankotia) · [LinkedIn](https://www.linkedin.com/in/vishesh-mankotia-b8569b292/)
