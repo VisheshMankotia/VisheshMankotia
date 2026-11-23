@@ -4,3 +4,5 @@ numpy>=1.24
 pandas>=2.0
 scipy>=1.10
 plotly>=5.18
+mygene>=3.2
+groq>=0.11
